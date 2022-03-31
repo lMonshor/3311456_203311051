@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lmonshor_tech_tips/theme_data.dart';
+import 'package:lmonshor_tech_tips/settings_page.dart';
 
 class MotherboardInformation extends StatelessWidget {
   const MotherboardInformation({Key? key}) : super(key: key);
@@ -19,7 +19,10 @@ class MotherboardInformation extends StatelessWidget {
                 },
                 icon: const Icon(Icons.home))
           ],
-          title: const Text('Motherboard'),
+          title: const Text(
+            'Motherboard',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -63,7 +66,10 @@ class CpuInformation extends StatelessWidget {
                 },
                 icon: const Icon(Icons.home))
           ],
-          title: const Text('CPU (Central Process Unit)'),
+          title: const Text(
+            'CPU (Central Process Unit)',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -107,7 +113,10 @@ class GpuInformation extends StatelessWidget {
                 },
                 icon: const Icon(Icons.home))
           ],
-          title: const Text('GPU (Graphics Processing Unit)'),
+          title: const Text(
+            'GPU (Graphics Processing Unit)',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -153,7 +162,10 @@ class RamInformation extends StatelessWidget {
                 },
                 icon: const Icon(Icons.home))
           ],
-          title: const Text('RAM (Random Access Memory)'),
+          title: const Text(
+            'RAM (Random Access Memory)',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -197,7 +209,10 @@ class SsdInformation extends StatelessWidget {
                 },
                 icon: const Icon(Icons.home))
           ],
-          title: const Text('SSD (Solid State Drive)'),
+          title: const Text(
+            'SSD (Solid State Drive)',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -241,7 +256,10 @@ class HddInformation extends StatelessWidget {
                 },
                 icon: const Icon(Icons.home))
           ],
-          title: const Text('HDD (Hard Disk Drive)'),
+          title: const Text(
+            'HDD (Hard Disk Drive)',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -285,7 +303,10 @@ class PsuInformation extends StatelessWidget {
                 },
                 icon: const Icon(Icons.home))
           ],
-          title: const Text('PSU (Power Supply Unit)'),
+          title: const Text(
+            'PSU (Power Supply Unit)',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(

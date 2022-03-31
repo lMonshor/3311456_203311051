@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lmonshor_tech_tips/theme_data.dart';
+import 'package:lmonshor_tech_tips/main_screen.dart';
+import 'package:lmonshor_tech_tips/onboarding_page_state.dart';
+import 'package:lmonshor_tech_tips/settings_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'main_screen.dart';
-import 'onboarding_page_state.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();

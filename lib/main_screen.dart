@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lmonshor_tech_tips/components_information.dart';
+import 'package:lmonshor_tech_tips/information_page.dart';
+import 'package:lmonshor_tech_tips/onboarding_page_state.dart';
 import 'package:lmonshor_tech_tips/questions.dart';
 import 'package:lmonshor_tech_tips/settings_page.dart';
-import 'package:lmonshor_tech_tips/theme_data.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'information.dart';
-import 'onboarding_page_state.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -22,29 +21,9 @@ class _MainScreenState extends State<MainScreen> {
         darkTheme: darkTheme,
         home: Scaffold(
           appBar: AppBar(
+            shadowColor: Colors.black,
+            centerTitle: true,
             title: const Text("lMonshor tech Tips"),
-            actions: [
-              IconButton(
-                  onPressed: () async {
-                    final prefs = await SharedPreferences.getInstance();
-                    prefs.setBool('showHome', false);
-
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                          builder: (context) => const OnboardingPageState()),
-                    );
-                  },
-                  icon: const Icon(Icons.logout)),
-              IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const SettingsPage(),
-                        ));
-                  },
-                  icon: const Icon(Icons.settings))
-            ],
           ),
           body: ListView(
             children: <Widget>[
@@ -57,9 +36,11 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     title: const Text(
                       "Motherboard",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text(
                       "Ayrıntılı bilgi için tıklayınız.",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     trailing: const Icon(Icons.navigate_next),
                     onTap: () {
@@ -80,9 +61,11 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     title: const Text(
                       "CPU (Central Process Unit)",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text(
                       "Ayrıntılı bilgi için tıklayınız.",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     trailing: const Icon(Icons.navigate_next),
                     onTap: () {
@@ -103,9 +86,11 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     title: const Text(
                       "GPU (Graphics Processing Unit)",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text(
                       "Ayrıntılı bilgi için tıklayınız.",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     trailing: const Icon(Icons.navigate_next),
                     onTap: () {
@@ -126,9 +111,11 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     title: const Text(
                       "RAM (Random Access Memory)",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text(
                       "Ayrıntılı bilgi için tıklayınız.",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     trailing: const Icon(Icons.navigate_next),
                     onTap: () {
@@ -149,9 +136,11 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     title: const Text(
                       "SSD (Solid State Drive)",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text(
                       "Ayrıntılı bilgi için tıklayınız.",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     trailing: const Icon(Icons.navigate_next),
                     onTap: () {
@@ -172,9 +161,11 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     title: const Text(
                       "HDD (Hard Disk Drive)",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text(
                       "Ayrıntılı bilgi için tıklayınız.",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     trailing: const Icon(Icons.navigate_next),
                     onTap: () {
@@ -195,9 +186,11 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     title: const Text(
                       "PSU (Power Suply Unit)",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text(
                       "Ayrıntılı bilgi için tıklayınız.",
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     trailing: const Icon(Icons.navigate_next),
                     onTap: () {
@@ -222,22 +215,77 @@ class _MainScreenState extends State<MainScreen> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     currentAccountPicture: CircleAvatar(
-                      backgroundImage: AssetImage('images/logo.jpg'),
+                      backgroundImage: AssetImage('images/pp.jpg'),
                     ),
                     accountEmail: Text(
                       "Mevlüt ARGIN",
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     )),
+                //Test
                 Card(
                   child: ListTile(
                       leading: const Icon(Icons.question_answer),
-                      title: const Text('Teste hazır mısınız?'),
+                      title: const Text(
+                        'Teste hazır mısınız?',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const QuestionPage1(),
+                          ),
+                        );
+                      }),
+                ),
+                //Ayarlar
+                Card(
+                  child: ListTile(
+                      leading: const Icon(Icons.settings),
+                      title: const Text(
+                        'Ayarlar',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SettingsPage(),
+                          ),
+                        );
+                      }),
+                ),
+                //Hakkinda
+                Card(
+                  child: ListTile(
+                      leading: const Icon(Icons.info),
+                      title: const Text(
+                        'Hakkında',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const InformationPage(),
+                          ),
+                        );
+                      }),
+                ),
+                //Cikis
+                Card(
+                  child: ListTile(
+                      leading: const Icon(Icons.exit_to_app),
+                      title: const Text(
+                        'Çıkış',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const OnboardingPageState(),
                           ),
                         );
                       }),

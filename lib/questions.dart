@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lmonshor_tech_tips/theme_data.dart';
+import 'package:lmonshor_tech_tips/settings_page.dart';
 import 'alert_dialog.dart';
 
 int score = 0;
@@ -38,48 +38,43 @@ class _QuestionPageState1 extends State<QuestionPage1> {
                 width: double.infinity,
                 child: Image.asset('images/cpu.png'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                    child: Text(
-                      'Yukarıda görünen bileşenin adı nedir? (motherboard,cpu,gpu,ram,ssd,hdd,psu)',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  ),
-                  TextField(
-                    autofocus: true,
-                    decoration: const InputDecoration(
-                        hintText: 'Cevabı buraya yazınız.'),
-                    textAlign: TextAlign.start,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    controller: answer,
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        if (answer.text == 'cpu') {
-                          score++;
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const QuestionPage2()));
-                        } else if (answer.text.isEmpty) {
-                          showAlertDialogNull(context);
-                        } else {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const QuestionPage2()));
-                        }
-                      },
-                      child: const Text('Tamam')),
-                ],
+              const Padding(
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                child: Text(
+                  'Yukarıda görünen bileşenin adı nedir? (motherboard,cpu,gpu,ram,ssd,hdd,psu)',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                child: TextField(
+                  textAlignVertical: TextAlignVertical.bottom,
+                  autofocus: true,
+                  decoration:
+                      const InputDecoration(hintText: 'Cevabı buraya yazınız.'),
+                  textAlign: TextAlign.start,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  controller: answer,
+                ),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    if (answer.text == 'cpu') {
+                      score++;
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const QuestionPage2()));
+                    } else if (answer.text.isEmpty) {
+                      showAlertDialogNull(context);
+                    } else {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const QuestionPage2()));
+                    }
+                  },
+                  child: const Text('Tamam')),
             ],
           ),
         ));
@@ -131,16 +126,17 @@ class _QuestionPageState2 extends State<QuestionPage2> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  ),
-                  TextField(
-                    autofocus: true,
-                    decoration: const InputDecoration(
-                        hintText: 'Cevabı buraya yazınız.'),
-                    textAlign: TextAlign.start,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    controller: answer,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                    child: TextField(
+                      textAlignVertical: TextAlignVertical.bottom,
+                      autofocus: true,
+                      decoration: const InputDecoration(
+                          hintText: 'Cevabı buraya yazınız.'),
+                      textAlign: TextAlign.start,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      controller: answer,
+                    ),
                   ),
                   ElevatedButton(
                       onPressed: () {
@@ -210,16 +206,17 @@ class _QuestionPageState3 extends State<QuestionPage3> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  ),
-                  TextField(
-                    autofocus: true,
-                    decoration: const InputDecoration(
-                        hintText: 'Cevabı buraya yazınız.'),
-                    textAlign: TextAlign.start,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    controller: answer,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                    child: TextField(
+                      textAlignVertical: TextAlignVertical.bottom,
+                      autofocus: true,
+                      decoration: const InputDecoration(
+                          hintText: 'Cevabı buraya yazınız.'),
+                      textAlign: TextAlign.start,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      controller: answer,
+                    ),
                   ),
                   ElevatedButton(
                       onPressed: () {
@@ -289,16 +286,17 @@ class _QuestionPageState4 extends State<QuestionPage4> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  ),
-                  TextField(
-                    autofocus: true,
-                    decoration: const InputDecoration(
-                        hintText: 'Cevabı buraya yazınız.'),
-                    textAlign: TextAlign.start,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    controller: answer,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                    child: TextField(
+                      textAlignVertical: TextAlignVertical.bottom,
+                      autofocus: true,
+                      decoration: const InputDecoration(
+                          hintText: 'Cevabı buraya yazınız.'),
+                      textAlign: TextAlign.start,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      controller: answer,
+                    ),
                   ),
                   ElevatedButton(
                       onPressed: () {
@@ -368,16 +366,17 @@ class _QuestionPageState5 extends State<QuestionPage5> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  ),
-                  TextField(
-                    autofocus: true,
-                    decoration: const InputDecoration(
-                        hintText: 'Cevabı buraya yazınız.'),
-                    textAlign: TextAlign.start,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    controller: answer,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                    child: TextField(
+                      textAlignVertical: TextAlignVertical.bottom,
+                      autofocus: true,
+                      decoration: const InputDecoration(
+                          hintText: 'Cevabı buraya yazınız.'),
+                      textAlign: TextAlign.start,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      controller: answer,
+                    ),
                   ),
                   ElevatedButton(
                       onPressed: () {
@@ -447,16 +446,17 @@ class _QuestionPageState6 extends State<QuestionPage6> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  ),
-                  TextField(
-                    autofocus: true,
-                    decoration: const InputDecoration(
-                        hintText: 'Cevabı buraya yazınız.'),
-                    textAlign: TextAlign.start,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    controller: answer,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                    child: TextField(
+                      textAlignVertical: TextAlignVertical.bottom,
+                      autofocus: true,
+                      decoration: const InputDecoration(
+                          hintText: 'Cevabı buraya yazınız.'),
+                      textAlign: TextAlign.start,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      controller: answer,
+                    ),
                   ),
                   ElevatedButton(
                       onPressed: () {
@@ -525,16 +525,17 @@ class _QuestionPageState7 extends State<QuestionPage7> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                  ),
-                  TextField(
-                    autofocus: true,
-                    decoration: const InputDecoration(
-                        hintText: 'Cevabı buraya yazınız.'),
-                    textAlign: TextAlign.start,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                    controller: answer,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                    child: TextField(
+                      textAlignVertical: TextAlignVertical.bottom,
+                      autofocus: true,
+                      decoration: const InputDecoration(
+                          hintText: 'Cevabı buraya yazınız.'),
+                      textAlign: TextAlign.start,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      controller: answer,
+                    ),
                   ),
                   ElevatedButton(
                       onPressed: () {

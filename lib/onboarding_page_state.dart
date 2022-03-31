@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lmonshor_tech_tips/main_screen.dart';
-import 'package:lmonshor_tech_tips/theme_data.dart';
+import 'package:lmonshor_tech_tips/settings_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -19,11 +19,11 @@ Widget buildPage({
           SizedBox(
             child: Image.asset(
               urlImage,
-              height: 400,
+              height: 350,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+            padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
             child: Text(
               title,
               style: const TextStyle(
@@ -37,7 +37,7 @@ Widget buildPage({
             child: Text(
               subtitle,
               style: const TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.bold),
             ),
@@ -83,18 +83,18 @@ class _OnboardingPageState extends State<OnboardingPageState> {
                   title: 'HOŞGELDİNİZ',
                   subtitle: ''),
               buildPage(
-                  color: Colors.white,
-                  urlImage: 'images/components.jpg',
+                  color: const Color.fromARGB(255, 26, 26, 26),
+                  urlImage: 'images/motherboard2.png',
                   title:
                       'Bilgisayar bileşenleri nelerdir hiç merak ettiniz mi?',
                   subtitle:
                       'Öğrenmek istediğiniz bileşenin üzerine tıklayın ve görün.'),
               buildPage(
-                  color: Colors.white,
-                  urlImage: 'images/selcuk.jpg',
+                  color: const Color.fromARGB(255, 26, 26, 26),
+                  urlImage: 'images/computer.png',
                   title: 'lMonshor tech Tips gururla sunar!',
                   subtitle:
-                      'Uygulamamamız telefonun teması ile otomatik olarak kendi tema ayarını yapmaktadır. İsterseniz manuel olarak ayar penceresinden de ayarlayabilirsiniz. Ayrıca sol üstte bulunan açılır pencereden de kendinizi test etmeyi unutmayın...')
+                      'Uygulamamız telefonun teması ile otomatik olarak kendi tema ayarını yapmaktadır. İsterseniz manuel olarak sol üstte bulunan açılır pencereden ayarlayabilirsiniz. Ayrıca aynı pencereden kendinizi test etmeyi unutmayın...')
             ],
           ),
         ),
