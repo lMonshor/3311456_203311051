@@ -7,6 +7,7 @@ ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   appBarTheme: const AppBarTheme(color: Colors.blue),
 );
+
 ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   appBarTheme: const AppBarTheme(color: Colors.grey),

@@ -1,8 +1,9 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:lmonshor_tech_tips/alert_dialog.dart';
 import 'package:lmonshor_tech_tips/components_information.dart';
-import 'package:lmonshor_tech_tips/information_page.dart';
+import 'package:lmonshor_tech_tips/about_page.dart';
 import 'package:lmonshor_tech_tips/onboarding_page_state.dart';
-import 'package:lmonshor_tech_tips/questions.dart';
 import 'package:lmonshor_tech_tips/settings_page.dart';
 
 class MainScreen extends StatefulWidget {
@@ -231,15 +232,10 @@ class _MainScreenState extends State<MainScreen> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const QuestionPage1(),
-                          ),
-                        );
+                        showAlertDialogInfo(context);
                       }),
                 ),
-                //Ayarlar
+                //Setting
                 Card(
                   child: ListTile(
                       leading: const Icon(Icons.settings),
@@ -256,7 +252,24 @@ class _MainScreenState extends State<MainScreen> {
                         );
                       }),
                 ),
-                //Hakkinda
+                //Onboardpage
+                Card(
+                  child: ListTile(
+                      leading: const Icon(Icons.device_unknown),
+                      title: const Text(
+                        'Hızlı başlangıç',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const OnboardingPageState(),
+                          ),
+                        );
+                      }),
+                ),
+                //About
                 Card(
                   child: ListTile(
                       leading: const Icon(Icons.info),
@@ -268,12 +281,12 @@ class _MainScreenState extends State<MainScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const InformationPage(),
+                            builder: (context) => const AboutPage(),
                           ),
                         );
                       }),
                 ),
-                //Cikis
+                //Exit
                 Card(
                   child: ListTile(
                       leading: const Icon(Icons.exit_to_app),
@@ -282,16 +295,11 @@ class _MainScreenState extends State<MainScreen> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const OnboardingPageState(),
-                          ),
-                        );
+                        exit(0);
                       }),
                 )
               ],
-            ), //Column
+            ),
           ),
         ));
   }
