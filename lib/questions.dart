@@ -48,7 +48,6 @@ class _QuestionPageState1 extends State<QuestionPage1> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
                 child: TextField(
-                  maxLength: 3,
                   textAlignVertical: TextAlignVertical.bottom,
                   autofocus: true,
                   decoration:
@@ -132,7 +131,6 @@ class _QuestionPageState2 extends State<QuestionPage2> {
                     child: TextField(
                       textAlignVertical: TextAlignVertical.bottom,
                       autofocus: true,
-                      maxLength: 11,
                       decoration: const InputDecoration(
                           hintText: 'Cevabı buraya yazınız.'),
                       textAlign: TextAlign.start,
@@ -213,7 +211,6 @@ class _QuestionPageState3 extends State<QuestionPage3> {
                     child: TextField(
                       textAlignVertical: TextAlignVertical.bottom,
                       autofocus: true,
-                      maxLength: 3,
                       decoration: const InputDecoration(
                           hintText: 'Cevabı buraya yazınız.'),
                       textAlign: TextAlign.start,
@@ -294,7 +291,6 @@ class _QuestionPageState4 extends State<QuestionPage4> {
                     child: TextField(
                       textAlignVertical: TextAlignVertical.bottom,
                       autofocus: true,
-                      maxLength: 3,
                       decoration: const InputDecoration(
                           hintText: 'Cevabı buraya yazınız.'),
                       textAlign: TextAlign.start,
@@ -375,7 +371,6 @@ class _QuestionPageState5 extends State<QuestionPage5> {
                     child: TextField(
                       textAlignVertical: TextAlignVertical.bottom,
                       autofocus: true,
-                      maxLength: 3,
                       decoration: const InputDecoration(
                           hintText: 'Cevabı buraya yazınız.'),
                       textAlign: TextAlign.start,
@@ -456,7 +451,6 @@ class _QuestionPageState6 extends State<QuestionPage6> {
                     child: TextField(
                       textAlignVertical: TextAlignVertical.bottom,
                       autofocus: true,
-                      maxLength: 3,
                       decoration: const InputDecoration(
                           hintText: 'Cevabı buraya yazınız.'),
                       textAlign: TextAlign.start,
@@ -536,7 +530,6 @@ class _QuestionPageState7 extends State<QuestionPage7> {
                     child: TextField(
                       textAlignVertical: TextAlignVertical.bottom,
                       autofocus: true,
-                      maxLength: 3,
                       decoration: const InputDecoration(
                           hintText: 'Cevabı buraya yazınız.'),
                       textAlign: TextAlign.start,
