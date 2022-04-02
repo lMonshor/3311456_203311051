@@ -27,14 +27,16 @@ class AboutPage extends StatelessWidget {
           ],
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            GestureDetector(
-              onTap: () {},
+            SizedBox(
+              height: 400,
               child: Image.asset('images/selcuk2.png'),
             ),
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 10, 20, 20),
-              child: Text(
+            Container(
+              margin: const EdgeInsets.fromLTRB(30, 10, 30, 20),
+              child: const Text(
                 'Bu uygulama Selçuk Üniversitesi 3311456 numaralı, öğretim görevlisi Ahmet Cevahir ÇINAR olan Mobil Programlama dersi için 203311051 numaralı Mevlüt ARGIN tarafından yapılmıştır.',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),

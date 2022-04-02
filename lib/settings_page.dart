@@ -39,31 +39,28 @@ class _SettingsPageState extends State<SettingsPage> {
           ],
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(40, 100, 50, 20),
-              child: Text(
+            Container(
+              margin: const EdgeInsets.fromLTRB(50, 0, 50, 30),
+              child: const Text(
                 'Sistem teması aydınlık modda ise tema değişikliği için anahtarı kullanın. ',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Center(
-                child: Switch(
-                  value: light,
-                  onChanged: (state) {
-                    setState(() {
-                      light = state;
-                    });
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const MainScreen()));
-                  },
-                ),
+            Center(
+              child: Switch(
+                value: light,
+                onChanged: (state) {
+                  setState(() {
+                    light = state;
+                  });
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainScreen()));
+                },
               ),
             ),
           ],
