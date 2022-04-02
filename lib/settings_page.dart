@@ -23,22 +23,6 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
-    return const DarkLightTheme();
-  }
-}
-
-class DarkLightTheme extends StatefulWidget {
-  const DarkLightTheme({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<DarkLightTheme> createState() => _DarkLightThemeState();
-}
-
-class _DarkLightThemeState extends State<DarkLightTheme> {
-  @override
-  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: light ? lightTheme : darkTheme,
