@@ -3,7 +3,7 @@
    <application
         android:label="lmonshor_tech_tips"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/logom">
         <activity
             android:name=".MainActivity"
             android:exported="true"

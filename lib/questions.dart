@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lmonshor_tech_tips/settings_page.dart';
-import 'alert_dialog.dart';
+import 'package:lmonshor_tech_tips/alert_dialog.dart';
 
 int score = 0;
 
