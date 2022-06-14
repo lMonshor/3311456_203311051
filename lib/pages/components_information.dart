@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lmonshor_tech_tips/settings_page.dart';
+import 'package:lmonshor_tech_tips/pages/settings_page.dart';
 
 //page builder
 Widget _buildPage(

@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:lmonshor_tech_tips/main_screen.dart';
-import 'package:lmonshor_tech_tips/onboarding_page_state.dart';
-import 'package:lmonshor_tech_tips/settings_page.dart';
+import 'package:lmonshor_tech_tips/pages/login_page.dart';
+import 'package:lmonshor_tech_tips/pages/onboarding_page_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
   final showHome = prefs.getBool('showHome') ?? false;
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp(showHome: showHome));
 }
+
+final navigatorKey = GlobalKey<NavigatorState>();
 
 class MyApp extends StatefulWidget {
   final bool showHome;
@@ -27,10 +31,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: light ? lightTheme : darkTheme,
-      darkTheme: darkTheme,
+      navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
-      home: widget.showHome ? const MainScreen() : const OnboardingPageState(),
+      home: widget.showHome ? const LoginPage() : const OnboardingPageState(),
     );
   }
 }

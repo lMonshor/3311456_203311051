@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:lmonshor_tech_tips/main_screen.dart';
+import 'package:lmonshor_tech_tips/pages/main_screen.dart';
 
 bool light = true;
-
-ThemeData lightTheme = ThemeData(
-  brightness: Brightness.light,
-  appBarTheme: const AppBarTheme(color: Colors.blue),
+DrawerThemeData drawerTheme = DrawerThemeData(
+  backgroundColor: Colors.grey[400],
 );
+Color appbarcolorlight = const Color.fromARGB(255, 26, 26, 26);
+Color? appbarcolordark = Colors.grey[400];
+ThemeData lightTheme = ThemeData(
+    drawerTheme: drawerTheme,
+    brightness: Brightness.light,
+    appBarTheme: AppBarTheme(color: appbarcolorlight),
+    cardColor: Colors.grey[400],
+    scaffoldBackgroundColor: Colors.grey[400]);
 
 ThemeData darkTheme = ThemeData(
-  brightness: Brightness.dark,
-  appBarTheme: const AppBarTheme(color: Colors.grey),
-);
+    brightness: Brightness.dark,
+    appBarTheme: AppBarTheme(color: appbarcolordark),
+    cardColor: Colors.grey[900],
+    scaffoldBackgroundColor: Colors.grey[900]);
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -52,14 +59,12 @@ class _SettingsPageState extends State<SettingsPage> {
             Center(
               child: Switch(
                 value: light,
-                onChanged: (state) {
+                onChanged: (state) async {
                   setState(() {
                     light = state;
                   });
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const MainScreen()));
+                  await Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => MainScreen()));
                 },
               ),
             ),

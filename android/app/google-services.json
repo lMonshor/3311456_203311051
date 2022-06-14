@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "444451984996",
+    "project_id": "lmonshor-tech-tips-8f201",
+    "storage_bucket": "lmonshor-tech-tips-8f201.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444451984996:android:062ceda84fa8dff00df171",
+        "android_client_info": {
+          "package_name": "com.example.lmonshor_tech_tips"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444451984996-emd60pckravjtk5p31h07p36nm762hcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoOJ5sskmS0yrG0gTcGHaADZfEE119OTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444451984996-emd60pckravjtk5p31h07p36nm762hcs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

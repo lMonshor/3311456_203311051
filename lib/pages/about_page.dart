@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lmonshor_tech_tips/main_screen.dart';
-import 'package:lmonshor_tech_tips/settings_page.dart';
+import 'package:lmonshor_tech_tips/pages/main_screen.dart';
+import 'package:lmonshor_tech_tips/pages/settings_page.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);
@@ -12,6 +12,7 @@ class AboutPage extends StatelessWidget {
       darkTheme: darkTheme,
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.grey[400],
         appBar: AppBar(
           title: const Text("Hakkında"),
           actions: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lmonshor_tech_tips/main_screen.dart';
-import 'package:lmonshor_tech_tips/settings_page.dart';
+import 'package:lmonshor_tech_tips/pages/login_page.dart';
+import 'package:lmonshor_tech_tips/pages/settings_page.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -13,15 +14,10 @@ Widget buildPage({
     Container(
       color: color,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            child: Image.asset(
-              urlImage,
-              height: 350,
-            ),
-          ),
+          SizedBox(child: Lottie.network(urlImage)),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
             child: Text(
@@ -79,22 +75,24 @@ class _OnboardingPageState extends State<OnboardingPageState> {
             children: [
               buildPage(
                   color: const Color.fromARGB(255, 26, 26, 26),
-                  urlImage: 'images/logo.jpg',
+                  urlImage:
+                      'https://assets2.lottiefiles.com/packages/lf20_frJ5A7.json',
                   title: 'HOŞGELDİNİZ',
                   subtitle: ''),
               buildPage(
                   color: const Color.fromARGB(255, 26, 26, 26),
-                  urlImage: 'images/motherboard2.png',
+                  urlImage:
+                      'https://assets7.lottiefiles.com/private_files/lf30_gysbecac.json',
                   title:
                       'Bilgisayar bileşenleri nelerdir hiç merak ettiniz mi?',
                   subtitle:
                       'Öğrenmek istediğiniz bileşenin üzerine tıklayın ve görün.'),
               buildPage(
                   color: const Color.fromARGB(255, 26, 26, 26),
-                  urlImage: 'images/computer.png',
+                  urlImage:
+                      'https://assets2.lottiefiles.com/packages/lf20_eavpm9ev.json',
                   title: 'lMonshor tech Tips gururla sunar!',
-                  subtitle:
-                      'Uygulamamız telefonun teması ile otomatik olarak kendi tema ayarını yapmaktadır. İsterseniz manuel olarak sol üstte bulunan açılır pencereden ayarlayabilirsiniz. Ayrıca aynı pencereden kendinizi test etmeyi unutmayın...')
+                  subtitle: '')
             ],
           ),
         ),
@@ -112,7 +110,7 @@ class _OnboardingPageState extends State<OnboardingPageState> {
                   prefs.setBool('showHome', true);
 
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const MainScreen()),
+                    MaterialPageRoute(builder: (context) => const LoginPage()),
                   );
                 },
                 child: const Text(
