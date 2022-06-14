@@ -41,6 +41,6 @@ Stream<List<System>> readSystems() => FirebaseFirestore.instance
 
 Widget buildSystem(System system) => ListTile(
       leading: Text(system.brand.toString()),
-      title: Text(system.brand.toString()),
+      title: Text(system.model.toString()),
       subtitle: Text(system.email.toString()),
     );
