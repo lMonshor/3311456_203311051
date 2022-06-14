@@ -5,9 +5,14 @@ bool light = true;
 DrawerThemeData drawerTheme = DrawerThemeData(
   backgroundColor: Colors.grey[400],
 );
-Color appbarcolorlight = const Color.fromARGB(255, 26, 26, 26);
+BottomNavigationBarThemeData bottomNavigationBarThemeLight =
+    BottomNavigationBarThemeData(backgroundColor: appbarcolorlight);
+BottomNavigationBarThemeData bottomNavigationBarThemeDark =
+    BottomNavigationBarThemeData(backgroundColor: appbarcolordark);
+Color? appbarcolorlight = const Color.fromARGB(255, 26, 26, 26);
 Color? appbarcolordark = Colors.grey[400];
 ThemeData lightTheme = ThemeData(
+    bottomNavigationBarTheme: bottomNavigationBarThemeLight,
     drawerTheme: drawerTheme,
     brightness: Brightness.light,
     appBarTheme: AppBarTheme(color: appbarcolorlight),
@@ -15,6 +20,7 @@ ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.grey[400]);
 
 ThemeData darkTheme = ThemeData(
+    bottomNavigationBarTheme: bottomNavigationBarThemeDark,
     brightness: Brightness.dark,
     appBarTheme: AppBarTheme(color: appbarcolordark),
     cardColor: Colors.grey[900],
@@ -63,8 +69,10 @@ class _SettingsPageState extends State<SettingsPage> {
                   setState(() {
                     light = state;
                   });
-                  await Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => MainScreen()));
+                  await Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MainScreen()));
                 },
               ),
             ),
