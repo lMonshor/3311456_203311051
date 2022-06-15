@@ -11,12 +11,14 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     // Replace with actual values
-    options: FirebaseOptions(
-      apiKey: "XXX",
-      appId: "XXX",
-      messagingSenderId: "XXX",
-      projectId: "XXX",
-    ),
+    options: const FirebaseOptions(
+        apiKey: "AIzaSyBPEUR1ospe-cK-Qczts0HAkfgm6iNyz-A",
+        authDomain: "lmonshor-tech-tips-8f201.firebaseapp.com",
+        projectId: "lmonshor-tech-tips-8f201",
+        storageBucket: "lmonshor-tech-tips-8f201.appspot.com",
+        messagingSenderId: "444451984996",
+        appId: "1:444451984996:web:402f3890009e90be0df171",
+        measurementId: "G-1SJ4ENJGXF"),
   );
 
   runApp(MyApp(showHome: showHome));
