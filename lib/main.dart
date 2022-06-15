@@ -9,13 +9,7 @@ Future main() async {
   final prefs = await SharedPreferences.getInstance();
   final showHome = prefs.getBool('showHome') ?? false;
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-      // ignore: prefer_const_constructors
-      options: FirebaseOptions(
-          apiKey: "Apikey",
-          appId: "APPID",
-          messagingSenderId: "",
-          projectId: "lmonshor-tech-tips-8f201"));
+  await Firebase.initializeApp();
   runApp(MyApp(showHome: showHome));
 }
 
