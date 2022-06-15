@@ -15,7 +15,7 @@ Future main() async {
           apiKey: "Apikey",
           appId: "APPID",
           messagingSenderId: "",
-          projectId: "lmonshor-tech-tips"));
+          projectId: "lmonshor-tech-tips-8f201"));
   runApp(MyApp(showHome: showHome));
 }
 
