@@ -19,6 +19,7 @@ class _ReadSystemsState extends State<ReadSystems> {
           stream: readSystems(),
           builder: (context, snapshot) {
             if (snapshot.hasError) {
+              print(snapshot.error);
               return const Text('biseyler yanlis gitti');
             } else if (snapshot.hasData) {
               final systems = snapshot.data!;

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "444451984996",
-    "project_id": "lmonshor-tech-tips-8f201",
-    "storage_bucket": "lmonshor-tech-tips-8f201.appspot.com"
+    "project_number": "458968775227",
+    "project_id": "lmonshor-tech-tips-8b555",
+    "storage_bucket": "lmonshor-tech-tips-8b555.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:444451984996:android:062ceda84fa8dff00df171",
+        "mobilesdk_app_id": "1:458968775227:android:9ef99f4f4b4c1ab2f07a1e",
         "android_client_info": {
           "package_name": "com.example.lmonshor_tech_tips"
         }
       },
       "oauth_client": [
         {
-          "client_id": "444451984996-emd60pckravjtk5p31h07p36nm762hcs.apps.googleusercontent.com",
+          "client_id": "458968775227-b44baj7ke2t4vjepbeiog8np8peoopt2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAoOJ5sskmS0yrG0gTcGHaADZfEE119OTg"
+          "current_key": "AIzaSyDdJT6uhObX0LrXiem17xfN10WbArD_2gs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "444451984996-emd60pckravjtk5p31h07p36nm762hcs.apps.googleusercontent.com",
+              "client_id": "458968775227-b44baj7ke2t4vjepbeiog8np8peoopt2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

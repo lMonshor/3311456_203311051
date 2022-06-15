@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/lmonshor_tech_tips/BuildConfig.java
+ com.example.lmonshor_tech_tips.BuildConfig

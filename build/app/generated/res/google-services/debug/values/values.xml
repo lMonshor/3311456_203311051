@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">458968775227-b44baj7ke2t4vjepbeiog8np8peoopt2.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">458968775227</string>
+    <string name="google_api_key" translatable="false">AIzaSyDdJT6uhObX0LrXiem17xfN10WbArD_2gs</string>
+    <string name="google_app_id" translatable="false">1:458968775227:android:9ef99f4f4b4c1ab2f07a1e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDdJT6uhObX0LrXiem17xfN10WbArD_2gs</string>
+    <string name="google_storage_bucket" translatable="false">lmonshor-tech-tips-8b555.appspot.com</string>
+    <string name="project_id" translatable="false">lmonshor-tech-tips-8b555</string>
+</resources>

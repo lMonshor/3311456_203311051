@@ -20,8 +20,8 @@ class System {
         'email': email,
       };
   static System fromJson(Map<String, dynamic> json) => System(
-      id: json['id'],
-      brand: json['brand'],
-      model: json['model'],
-      email: json['email']);
+      id: json['id'] ?? 0,
+      brand: json['brand'] ?? '',
+      model: json['model'] ?? '',
+      email: json['email'] ?? '');
 }

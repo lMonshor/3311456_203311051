@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lmonshor_tech_tips/pages/login_page.dart';
 import 'package:lmonshor_tech_tips/pages/onboarding_page_state.dart';
@@ -8,18 +9,17 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
   final showHome = prefs.getBool('showHome') ?? false;
-  WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(
-    // Replace with actual values
-    options: const FirebaseOptions(
-        apiKey: "AIzaSyBPEUR1ospe-cK-Qczts0HAkfgm6iNyz-A",
-        authDomain: "lmonshor-tech-tips-8f201.firebaseapp.com",
-        projectId: "lmonshor-tech-tips-8f201",
-        storageBucket: "lmonshor-tech-tips-8f201.appspot.com",
-        messagingSenderId: "444451984996",
-        appId: "1:444451984996:web:402f3890009e90be0df171",
-        measurementId: "G-1SJ4ENJGXF"),
-  );
+      options: kIsWeb
+          ? const FirebaseOptions(
+              apiKey: "AIzaSyBiYLzEqW4zL8rCE_2_dyy74NkTgi7aqAU",
+              authDomain: "lmonshor-tech-tips-8b555.firebaseapp.com",
+              projectId: "lmonshor-tech-tips-8b555",
+              storageBucket: "lmonshor-tech-tips-8b555.appspot.com",
+              messagingSenderId: "458968775227",
+              appId: "1:458968775227:web:e59713f474178d99f07a1e")
+          : null);
 
   runApp(MyApp(showHome: showHome));
 }
